@@ -43,6 +43,7 @@ pipeline {
                withSonarQubeEnv('Sonarqube server connection') {
                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=my-project \
                    -Dsonar.projectName=my-project \
+		   -Dsonar.token=sqa_1930a831282b897e091d3074560eb2ef2e0bf5c8 \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
