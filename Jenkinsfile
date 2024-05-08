@@ -1,5 +1,8 @@
 pipeline {
 	agent { label 'agent1'}
+	tools {
+   		 maven "MAVEN3"
+        }
 	stages {
 	    stage('Fetch code') {
             steps {
