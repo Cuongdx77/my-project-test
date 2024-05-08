@@ -41,7 +41,7 @@ pipeline {
 		sonarToken = credentials('Sonarqube_Cred')
             }
             steps {
-               withSonarQubeEnv('Sonarqube server connection') {
+               withSonarQubeEnv('Sonarqube_server') {
                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=my-project \
                    -Dsonar.projectName=my-project \
 		   -Dsonar.token=${sonarToken} \
